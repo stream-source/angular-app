@@ -1,0 +1,21 @@
+<p>four-component works!</p>
+<hr>
+
+<!-- html数据绑定
+语法:{{ng表达式}}
+-->
+<div>用户名:{{username}}</div>
+<div>年龄:{{age}}</div>
+<div>算术运算：明年年龄:{{age + 1}}</div>
+<div>比较运算：是否成年:{{age}},{{age >=18}}</div>
+<div>三目：{{age >= 18 ? '成年' : '未成年'}}</div>
+<div>用户名长度:{{username.length}}</div>
+<div>下标为1:{{username[1]}}</div>
+<!-- <div>{{new String()}}</div> -->
+
+<!-- 属性绑定 -->
+<p title="{{title}}">jklj红红我Hi好科技师范gas非机构发时间 ljsjfpogi</p>
+<p [title]="title">jklj按老规矩福利卡就赶紧了肯定ljsjfpogi</p>
+
+<!-- 事件绑定 -->
+
