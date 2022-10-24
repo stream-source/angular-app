@@ -1,0 +1,13 @@
+<hr>
+<p>buy-count works!</p>
+
+<!-- 
+    1、属性绑定：常量+变量
+    2、事件绑定：(),方法必须加()
+-->
+<button (click)= "reduceCount()" [title]="'当前购买数量:' + count">-</button>
+<span>{{count}}</span>
+<button (click)="addCount()">+</button>
+
+<hr>
+<!-- <img [src] = "'../../assets/' + imgUrl"> -->
