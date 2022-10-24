@@ -1,0 +1,37 @@
+<p>tablelist works!</p>
+<hr>
+<h3>员工列表</h3>
+<table border="1" width="100%">
+    <tbody>
+        <tr aria-colspan="7" *ngIf="empList.length == 0">
+            无员工数据
+        </tr>
+        <tr *ngFor="let item of empList; index as i">
+            <td>{{item.eid}}</td>
+            <td>{{item.name}}</td>
+            <!-- 属性绑定，鼠标放上回显数据；
+                三目运算符
+            -->
+            <td [title]="item.name"> {{item.name | slice:0:3}}{{item.name.length > 3 ? '...' : ''}}</td>
+            <td>{{item.age}}</td>
+            <td>{{item.salary}}</td>
+            <td>{{item.salary | number}}</td>
+            <!-- 整数位、最小小数位-最大小数位 -->
+            <td>{{item.salary | number : '4.2-3'}}</td>
+            <td>{{item.salary | currency}}</td>
+            <td>{{item.salary | currency:'￥'}}</td>
+            <td>{{item.birthday}}</td>
+            <td>{{item.zzmm | zzmm }}</td>
+            <td>{{item.sex | sex}}</td>
+            <!-- 管道传入参数格式，使用： -->
+            <td>{{item.sex | sex : 'en'}}</td>
+            <td>
+                <button (click)="doDelete(i)">删除</button>
+            </td>
+        
+        </tr>
+    </tbody>
+</table>
+
+<hr>
+<span>{{empList | json}}</span>
