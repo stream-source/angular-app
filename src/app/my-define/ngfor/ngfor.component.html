@@ -1,0 +1,9 @@
+<p>ngfor works!</p>
+
+<ul>
+    <li *ngFor="let user of userList">{{user}}</li>
+</ul>
+<!-- 下标 -->
+<ul>
+    <li *ngFor="let user of userList; index as i">{{i}} - {{user}}</li>
+</ul>
