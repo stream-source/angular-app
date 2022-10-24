@@ -1,0 +1,27 @@
+<hr>
+<p>ngif works!</p>
+
+<!-- 简单if语句 -->
+<div *ngIf="isPay">
+    此模块为付费用户可见！
+</div>
+
+<!-- if -else -->
+<div *ngIf="age>=18; then tureText else falseText"></div>
+<ng-template #tureText>
+    此处为成年人模块
+</ng-template>
+<ng-template #falseText>
+    此处为儿童模块
+</ng-template>
+<hr>
+
+<!-- if-else按钮 -->
+<div *ngIf="hasMore; then more else noMore"></div>
+<ng-template #more>
+    <button (click) = "loadMore()">加载更多</button>
+</ng-template>
+<ng-template #noMore>
+    <p>已经到底了，无更多内容</p>
+    <hr>
+</ng-template>
