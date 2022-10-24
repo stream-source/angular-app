@@ -1,0 +1,9 @@
+<p>ngmodel works!</p>
+<!-- 事件监听ngModel -->
+<input [(ngModel)]="username" placeholder="请输出用户名" (ngModelChange)="doUsernameChange()">
+<!-- <p >当前用户输入:{{username}}</p> -->
+
+
+<hr>
+<input type="password" [(ngModel)]="password" (ngModelChange)="doPasswordChange()">
+<span>{{message}}</span>
