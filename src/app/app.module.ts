@@ -20,6 +20,7 @@ import { TablelistComponent } from './my-define/tablelist/tablelist.component';
 import { SexPipe } from './my-define/tablelist/sex.pipe';
 import { ZzmmPipe } from './my-define/tablelist/zzmm.pipe';
 import { CreateobjectComponent } from './my-define/createobject/createobject.component';
+import { HttpclientComponent } from './my-define/httpclient/httpclient.component';
 
 /**
  * @NgModule标识其为模块，模块中注册组件
@@ -43,7 +44,8 @@ import { CreateobjectComponent } from './my-define/createobject/createobject.com
     TablelistComponent,
     SexPipe,
     ZzmmPipe,
-    CreateobjectComponent
+    CreateobjectComponent,
+    HttpclientComponent
   ],
   imports: [
     //导入模块
