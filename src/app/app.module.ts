@@ -19,6 +19,7 @@ import { TodlistComponent } from './my-define/todlist/todlist.component';
 import { TablelistComponent } from './my-define/tablelist/tablelist.component';
 import { SexPipe } from './my-define/tablelist/sex.pipe';
 import { ZzmmPipe } from './my-define/tablelist/zzmm.pipe';
+import { CreateobjectComponent } from './my-define/createobject/createobject.component';
 
 /**
  * @NgModule标识其为模块，模块中注册组件
@@ -41,7 +42,8 @@ import { ZzmmPipe } from './my-define/tablelist/zzmm.pipe';
     TodlistComponent,
     TablelistComponent,
     SexPipe,
-    ZzmmPipe
+    ZzmmPipe,
+    CreateobjectComponent
   ],
   imports: [
     //导入模块
