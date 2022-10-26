@@ -4,7 +4,8 @@ import { TimerService } from './timer.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
+  providers:[TimerService]//仅用于当前组件中
 })
 export class LoginComponent implements OnInit {
 

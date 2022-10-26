@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
+// @Injectable({
+//   providedIn: 'root'//单例服务对象，注册在主模块中，所有组件共用该服务对象
+// })
+@Injectable()//创建多例的，组件各自引用服务对象，不受影响
 export class TimerService {
 
   constructor() { 

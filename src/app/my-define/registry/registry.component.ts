@@ -4,7 +4,8 @@ import { TimerService } from '../login/timer.service';
 @Component({
   selector: 'app-registry',
   templateUrl: './registry.component.html',
-  styleUrls: ['./registry.component.css']
+  styleUrls: ['./registry.component.css'],
+  providers:[TimerService]
 })
 export class RegistryComponent implements OnInit {
 
