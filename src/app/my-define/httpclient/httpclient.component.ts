@@ -8,18 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HttpclientComponent implements OnInit {
 
-  client : HttpClient;
-  constructor(client: HttpClient) { 
+  // client : HttpClient;
+  constructor(private client: HttpClient) { 
     this.client = client;
   }
 
+  private pageNumber:number = 0;
+
+
+
 
   loadProduct(){
-    let url =  'https://mallapi.dev.anhuanjia.com/mall4cloud_search/ua/search/pc_page?pageNum=1&pageSize=12&keyword=%E5%8F%A3%E7%BD%A9&needActivity=1';
+    this.pageNumber ++;
+    let url =  'https://mallapi.dev.anhuanjia.com/mall4cloud_search/ua/search/pc_page?pageNum=' + this.pageNumber + '&pageSize=12&keyword=%E5%8F%A3%E7%BD%A9&needActivity=1';
     //发起异步请求，并订阅
-    this.client.get(url).subscribe((res) => {
+    this.client.get(url).subscribe((res:any) => {
+      console.log(url);
       console.log('订阅响应的消息');
-      console.log(res);
+      console.log(res.data);
+      
+    
     });
   }
 
