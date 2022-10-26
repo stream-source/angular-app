@@ -22,6 +22,8 @@ import { ZzmmPipe } from './my-define/tablelist/zzmm.pipe';
 import { CreateobjectComponent } from './my-define/createobject/createobject.component';
 import { HttpclientComponent } from './my-define/httpclient/httpclient.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { LoginComponent } from './my-define/login/login.component';
+import { RegistryComponent } from './my-define/registry/registry.component';
 
 /**
  * @NgModule标识其为模块，模块中注册组件
@@ -46,7 +48,9 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
     SexPipe,
     ZzmmPipe,
     CreateobjectComponent,
-    HttpclientComponent
+    HttpclientComponent,
+    LoginComponent,
+    RegistryComponent
   ],
   imports: [
     //导入模块
